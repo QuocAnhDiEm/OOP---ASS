@@ -1,3 +1,4 @@
+package operation;
 
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
@@ -5,6 +6,7 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.stage.Stage;
+import model.Product;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.ScatterChart;
 import java.io.*;
@@ -256,10 +258,6 @@ public class ProductOperation {
             e.printStackTrace();
         }
     }
-
-
-    
-
 
     /**
      * Generates a pie chart showing the proportion of products with discounts in three categories:
