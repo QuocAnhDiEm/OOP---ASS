@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",  // Replace with the actual main class 
+            "vmArgs": "--module-path ${workspaceFolder}/lib --add-modules javafx.controls,javafx.fxml",
+            "classPaths": [
+                "bin",  // Folder containing compiled .class files
+                "lib/javafx-controls.jar",  // Path to JavaFX Controls JAR
+                "lib/javafx-base.jar",  // Path to JavaFX Base JAR
+                "lib/javafx-graphics.jar",  // Path to JavaFX Graphics JAR
+                "lib/javafx-media.jar",  // Path to JavaFX Media JAR
+                "lib/javafx-swing.jar",  // Path to JavaFX Swing JAR
+                "lib/javafx-web.jar",  // Path to JavaFX Web JAR
+                "lib/javafx-swt.jar",  // Path to JavaFX SWT JAR
+                "lib/jdk.sobject.jar",  // Add other necessary JARs if any
+                "lib/jfx.incubator.input.jar",  // Add other necessary JARs if any
+                "lib/jfx.incubator.richtext.jar"  // Add other necessary JARs if any
+            ]
+        }
+    ]
+}
