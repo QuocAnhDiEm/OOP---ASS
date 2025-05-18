@@ -1,3 +1,4 @@
+package model;
 /*class product*/
 public class Product {
 

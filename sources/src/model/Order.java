@@ -1,3 +1,4 @@
+package model;
 //Order.class
  
 public class Order {
@@ -7,7 +8,8 @@ public class Order {
     private String userId;      //  ID of the user who placed the order
     private String proId;       // ID of the product ordered
     private String orderTime;   //  Time when the order was placed (format: “DD-MM-YYYY_HH:MM:SS”)
-
+    private double orderPrice;
+    
     /**
      *  Constructs an order object.
      * @param orderId  Must be a unique string, format is o_5 digits such as o_12345
@@ -15,11 +17,12 @@ public class Order {
      * @param proId  ID of the product ordered
      * @param orderTime Format: "DD-MM-YYYY_HH:MM:SS"
      */
-    public Order(String orderId, String userId, String proId, String orderTime) {
+    public Order(String orderId, String userId, String proId, String orderTime, double orderPrice) {
         this.orderId = orderId;
         this.userId = userId;
         this.proId = proId;
         this.orderTime = orderTime;
+        this.orderPrice = orderPrice;
     }
 
     /**
@@ -43,6 +46,9 @@ public class Order {
     }
 
     // Getter and Setter methods for each instance variable
+    public double getOrderPrice() {
+        return orderPrice;
+    }
 
     public String getOrderId() {
         return orderId;
