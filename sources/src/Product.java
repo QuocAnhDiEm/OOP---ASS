@@ -12,7 +12,8 @@ public class Product {
     private int proLikesCount;     // Số lượng thích (like) của sản phẩm
 
     /**
-     * Constructor khởi tạo đầy đủ thông tin cho sản phẩm.
+     * Constructor : 
+     * Constructs a product object.
      * @param proId ID sản phẩm (Phải duy nhất).
      * @param proModel Mẫu sản phẩm.
      * @param proCategory Danh mục sản phẩm.
@@ -48,8 +49,8 @@ public class Product {
         this.proLikesCount = 0;
     }
 
-    /** trả thông tin về dạng (JSON-like format).
-     * @return Chuỗi mô tả thông tin sản phẩm dưới định dạng JSON-like.
+    /** Returns the product information as a formatted string
+     * @return  String in JSON-like format
      */
     @Override
     public String toString() {
