@@ -1,4 +1,4 @@
-package Operation;
+package operation;
 
 import java.io.*;
 import java.util.*;
