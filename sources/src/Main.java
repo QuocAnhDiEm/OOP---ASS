@@ -1,7 +1,6 @@
 import operation.UserOperation;
 import operation.AdminOperation;
 import interfacecli.IOInterface;
-import operation.CustomerOperation;
 import model.User;
 
 public class Main {
@@ -38,8 +37,8 @@ public class Main {
 
                 case "2": // Register (Customer only)
                     String[] regInput = io.getUserInput("Enter username, password, email, mobile:", 4);
-                    boolean success = CustomerOperation.getInstance().registerCustomer(
-                                            regInput[0], regInput[1], regInput[2], regInput[3]);
+                    boolean success = operation.CustomerOperation.getInstance().registerCustomer(
+                        regInput[0], regInput[1], regInput[2], regInput[3]);
                     if (success) {
                         io.printMessage("Registration successful. You can now log in.");
                     } else {
