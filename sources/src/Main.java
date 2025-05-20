@@ -1,13 +1,8 @@
-<<<<<<< Updated upstream:sources/Main.java
-import Operation.UserOperation;
-import Operation.AdminOperation;
-=======
 import operation.UserOperation;
 import operation.AdminOperation;
 import operation.CustomerOperation;
->>>>>>> Stashed changes:sources/src/Main.java
 import interfacecli.IOInterface;
-import src.model.User;
+import model.User;
 
 public class Main {
     public static void main(String[] args) {
@@ -51,11 +46,7 @@ public class Main {
 
                 case "2": // Register (Customer only)
                     String[] regInput = io.getUserInput("Enter username, password, email, mobile:", 4);
-<<<<<<< Updated upstream:sources/Main.java
-                    boolean success = Operation.CustomerOperation.getInstance().registerCustomer(
-=======
                     boolean success = CustomerOperation.getInstance().registerCustomer(
->>>>>>> Stashed changes:sources/src/Main.java
                         regInput[0], regInput[1], regInput[2], regInput[3]);
                     if (success) {
                         io.printMessage("Registration successful. You can now log in.");

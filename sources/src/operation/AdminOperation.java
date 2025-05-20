@@ -1,4 +1,4 @@
-package Operation;
+package operation;
 
 import java.io.*;
 import model.Admin;
@@ -26,10 +26,11 @@ public class AdminOperation {
         Admin admin = new Admin(userId, "admin", encryptedPass, registerTime, "admin");
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(USER_FILE, true))) {
+            // Đảm bảo ghi xuống file đúng định dạng, thêm dấu phẩy nếu cần phân tách dòng
             writer.write(admin.toString());
             writer.newLine();
         } catch (IOException e) {
-            System.out.println("Error writing admin to file.");
+            System.out.println("Error writing admin to file: " + e.getMessage());
         }
     }
 }

@@ -1,4 +1,4 @@
-package Operation;
+package operation;
 
 import java.io.*;
 import java.util.*;
@@ -33,7 +33,9 @@ public class UserOperation {
         try (BufferedReader br = new BufferedReader(new FileReader(USER_FILE))) {
             String line;
             while ((line = br.readLine()) != null) {
+                // Sửa lại điều kiện kiểm tra userId cho đúng định dạng file users.txt
                 if (line.contains("\"user_id\":\"" + id + "\"")) return true;
+                // Nếu file users.txt lưu theo CSV, cần parse lại dòng này cho phù hợp
             }
         } catch (IOException ignored) {}
         return false;

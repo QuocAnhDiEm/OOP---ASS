@@ -1,4 +1,4 @@
-package Operation;
+package operation;
 
 import java.io.*;
 import java.time.LocalDateTime;
@@ -44,10 +44,12 @@ public class CustomerOperation {
         Customer customer = new Customer(userId, userName, encryptedPass, time, "customer", userEmail, userMobile);
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(USER_FILE, true))) {
+            // Đảm bảo ghi đúng định dạng, nếu file users.txt là JSON-like thì customer.toString() là hợp lý
             bw.write(customer.toString());
             bw.newLine();
             return true;
         } catch (IOException e) {
+            System.out.println("Error writing customer to file: " + e.getMessage());
             return false;
         }
     }
