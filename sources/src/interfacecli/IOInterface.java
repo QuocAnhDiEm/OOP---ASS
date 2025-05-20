@@ -59,9 +59,10 @@ public class IOInterface {
     }
 
     /**
-     * Display the admin menu with options.
+     * Display the admin menu with options and handle input.
+     * @return true if user chooses Logout, false otherwise
      */
-    public void adminMenu() {
+    public boolean adminMenu() {
         System.out.println("===== Admin Menu =====");
         System.out.println("1. Show products");
         System.out.println("2. Add customers");
@@ -72,12 +73,20 @@ public class IOInterface {
         System.out.println("7. Delete all data");
         System.out.println("8. Logout");
         System.out.print("Select an option: ");
+        String[] input = getUserInput("", 1);
+        String choice = input[0];
+        if (choice.equals("8")) {
+            return true;
+        }
+        // ...handle other admin options here if needed...
+        return false;
     }
 
     /**
-     * Display the customer menu with options.
+     * Display the customer menu with options and handle input.
+     * @return true if user chooses Logout, false otherwise
      */
-    public void customerMenu() {
+    public boolean customerMenu() {
         System.out.println("===== Customer Menu =====");
         System.out.println("1. Show profile");
         System.out.println("2. Update profile");
@@ -86,6 +95,13 @@ public class IOInterface {
         System.out.println("5. Generate all consumption figures");
         System.out.println("6. Logout");
         System.out.print("Select an option: ");
+        String[] input = getUserInput("", 1);
+        String choice = input[0];
+        if (choice.equals("6")) {
+            return true;
+        }
+        // ...handle other customer options here if needed...
+        return false;
     }
 
     /**
